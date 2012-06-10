@@ -1,4 +1,18 @@
 include <params.scad>
+use <bearing.scad>
+
+module subtractor() {
+  difference() {
+    for (i = [0:stator_count/2]) {
+      rotate([0, 0, i * (360 / (stator_count / 2))]) {
+        translate([0, blade_holder_edge / -2, 0]) {
+          cube([rotor_cap_radius, blade_holder_edge, rotor_plate_height]);
+        }
+      }
+    }
+    cylinder(h=rotor_plate_height, r=bearing_or);
+  }
+}
 
 module rotor_insert() {
   cylinder(r=rotor_cap_radius, h=rotor_cap_height);
@@ -15,7 +29,6 @@ module blade_holder() {
       translate([0, blade_holder_edge/-2, 0]) {
         rotate([0, 0, 90]) { cube([blade_holder_edge, rotor_cap_radius, blade_holder_edge]); }
       }
-
       translate([0, 0, blade_holder_edge/2]) {
         rotate([0, -90, 0]) {
           cylinder(r=hole_radius, h=rotor_cap_radius + 10);
@@ -26,9 +39,16 @@ module blade_holder() {
 }
 
 module rotor_cap_full() {
-  rotor_insert();
-  for (i = [0:stator_count/2]) {
-    rotate([0, 0, i * (360 / (stator_count/2))]) { blade_holder(); }
+  difference() {
+    union() {
+      rotor_insert();
+      for (i = [0:stator_count/2]) {
+        rotate([0, 0, i * (360 / (stator_count/2))]) { blade_holder(); }
+      }
+    }
+    translate([0, 0, rotor_cap_height - rotor_plate_height]) {
+      subtractor();
+    }
   }
 }
 

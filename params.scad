@@ -8,9 +8,15 @@ mag_ring_ir = 50.8;
 mag_ring_or = 101.6;
 mag_count = 16;
 
+// BEARING
+bearing_height = 17;
+bearing_ir = 33;
+bearing_or = 44;
+
 // STATOR
 stator_height = 20;
 stator_inner_height = 10;
+stator_bearing_inset = (stator_height/2) - 1;
 stator_count = 6;
 stator_incidence = 360/stator_count;
 stator_radius = 115;
@@ -31,11 +37,22 @@ rotor_radius = 105;
 rotor_inner_diameter = 25;
 rotor_count = 8;
 rotor_incidence = 360/rotor_count;
+rotor_tie_hole_offset = 30;
 
 rotor_cap_radius = 50;
 rotor_cap_peg_radius = 35;
 rotor_cap_inner_radius = 10;
-rotor_cap_height = 5;
+rotor_cap_height = 10;
 rotor_cap_insert_height = 10;
+rotor_cap_bearing_inset = (bearing_height + rotor_inner_height) - rotor_cap_height;
+rotor_plate_height = 5;
 blade_holder_edge = 20;
+
+// ROTOR EDGE TIE
+rotor_edge_tie_length = 40;
+rotor_edge_tie_width = 20;
+rotor_edge_tie_inner_height = 5;
+rotor_edge_tie_height = 15;
+rotor_edge_tie_peg_inset = 10;
+
 

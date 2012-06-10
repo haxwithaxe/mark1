@@ -1,7 +1,9 @@
 include <params.scad>
+use <bearing.scad>
 use <magnet.scad>
 
 rotor_edge = 100;
+bearing_inset = bearing_height - (stator_bearing_inset + 1);
 
 module subtractor() {
   rotate([0, 0, -22.5]) {
@@ -15,10 +17,9 @@ module rotor() {
     subtractor();
     mirror([1, 0, 0]) { subtractor(); }
     translate([-rotor_edge/2, 0, 0]) { cube([rotor_edge, 25, rotor_height]); }
-    translate([-rotor_edge/2, 0, 3]) { cube([rotor_edge, 50, 7]); }
-    translate([0, 35, 0]) { cylinder(h=rotor_height, r=hole_radius); }
-    translate([30, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
-    translate([-30, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
+    translate([0, 0, rotor_height - bearing_inset]) bearing();
+    translate([rotor_tie_hole_offset, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
+    translate([-rotor_tie_hole_offset, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
     rotate([0, 0, rotor_incidence*1.75]) { magnet(); }
   }
 }

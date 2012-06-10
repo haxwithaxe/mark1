@@ -1,6 +1,7 @@
 include <params.scad>
+use <bearing.scad>
 
-coil_block_length = 70;
+coil_block_length = 70; // would be more accurate to calculate this with the pythagorean theorem, but less useful
 stator_x = stator_radius * 1.25;
 
 module coil_subtractor() {
@@ -60,6 +61,11 @@ module stator() {
     translate([stator_notch_width/-2, 0, 0]) {
       cube([stator_notch_width, stator_notch, stator_height]);
     }
+    translate([25, stator_radius - stator_notch, stator_height/2]) {
+      cube([stator_notch_width, stator_radius/2, stator_height/2]);
+    }
+    translate([0, 0, stator_height - stator_bearing_inset]) bearing();
+    translate([0, 0, stator_bearing_inset - bearing_height]) bearing();
   }
   translate([stator_outer_tab_width/-2, stator_radius, 0]) tab();
   rotate([0, 0, 90 - stator_incidence]) {
