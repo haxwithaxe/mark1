@@ -11,7 +11,7 @@ module subtractor() {
   }
 }
 
-module rotor() {
+module rotor_raw() {
   difference() {
     translate([-rotor_edge/2, 0, 0]) { cube([rotor_edge, rotor_radius, rotor_height]); }
     subtractor();
@@ -21,7 +21,15 @@ module rotor() {
     translate([rotor_tie_hole_offset, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
     translate([-rotor_tie_hole_offset, rotor_radius - 10, 0]) { cylinder(h=rotor_height, r=hole_radius); }
     rotate([0, 0, rotor_incidence*1.75]) { magnet(); }
+    translate([rotor_notch/-2, rotor_radius - rotor_notch, rotor_height - rotor_notch_height]) {
+      cube([rotor_notch, rotor_notch, rotor_notch_height]);
+    }
   }
 }
 
+module rotor() {
+  rotate([0, 180, 0]) rotor_raw();
+}
+
 rotor();
+

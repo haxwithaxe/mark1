@@ -4,7 +4,7 @@
  * THIS PART NEEDS TO CONTAIN IRON IN ORDER TO SHAPE THE MAGNETIC FLUX
  * WITHOUT IRON IT WILL DO NOTHING AND YOUR TURBINE WILL NOT WORK
  */
-include <params.scad>---
+include <params.scad>
 use <rotor_edge_tie.scad>
 
 module octagon() {

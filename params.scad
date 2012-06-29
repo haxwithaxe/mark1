@@ -3,9 +3,9 @@ hole_radius = 5;
 peg_radius = 4.5;
 
 // MAGNET
-mag_height = 7;
-mag_ring_ir = 50.8;
-mag_ring_or = 101.6;
+mag_height = 6.4;
+mag_ring_ir = 50;
+mag_ring_or = 102;
 mag_count = 16;
 
 // BEARING
@@ -38,6 +38,8 @@ rotor_inner_diameter = 25;
 rotor_count = 8;
 rotor_incidence = 360/rotor_count;
 rotor_tie_hole_offset = 30;
+rotor_notch = 10;
+rotor_notch_height = 2;
 
 rotor_cap_radius = 50;
 rotor_cap_peg_radius = 35;
