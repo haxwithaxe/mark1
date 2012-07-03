@@ -53,9 +53,11 @@ module rotor_cap_full() {
 }
 
 module rotor_cap() {
-  difference() {
-    rotor_cap_full();
-    translate([0, 0, -50]) { cylinder(h=100, r=rotor_cap_inner_radius); }
+  rotate([0, 180, 0]) {
+    difference() {
+      rotor_cap_full();
+      translate([0, 0, -50]) { cylinder(h=100, r=rotor_cap_inner_radius); }
+    }
   }
 }
 

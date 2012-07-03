@@ -5,7 +5,6 @@
  * WITHOUT IRON IT WILL DO NOTHING AND YOUR TURBINE WILL NOT WORK
  */
 include <params.scad>
-use <rotor_edge_tie.scad>
 
 module octagon() {
   intersection(){
