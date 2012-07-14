@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2012 Haydn Vesta
+ * 
+ * See the file license.txt for copying permission.
+ * 
+ */
+
 // GLOBAL
 hole_radius = 5;
 peg_radius = 4.5;

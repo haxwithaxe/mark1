@@ -1,3 +1,10 @@
+/*
+ * Copyright (c) 2012 Haydn Vesta
+ * 
+ * See the file license.txt for copying permission.
+ *
+ */
+
 include <params.scad>
 
 x_inset = rotor_edge_tie_peg_inset + (hole_radius / 4);

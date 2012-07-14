@@ -1,4 +1,9 @@
 /*
+ * Copyright (c) 2012 Haydn Vesta
+ * 
+ * See the file license.txt for copying permission.
+ * 
+ * 
  * DISCLAIMER!
  * THIS IS NOT A PRINTED PART
  * IT IS A PLACEHOLDER FOR A THIRD-PARTY BEARING

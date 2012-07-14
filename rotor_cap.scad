@@ -1,3 +1,11 @@
+/*
+ * Copyright (c) 2012 Haydn Vesta
+ * 
+ * See the file license.txt for copying permission.
+ *
+ */
+
+
 include <params.scad>
 use <bearing.scad>
 
