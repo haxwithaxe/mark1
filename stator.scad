@@ -1,7 +1,7 @@
 include <params.scad>
 use <bearing.scad>
 
-coil_block_length = 70; // would be more accurate to calculate this with the pythagorean theorem, but less useful
+
 stator_x = stator_radius * 1.25;
 
 module coil_subtractor() {

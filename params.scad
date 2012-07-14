@@ -29,6 +29,7 @@ stator_outer_tab_width = 30;
 stator_notch = 15;
 stator_notch_width = 5;
 coil_edge = 80;
+coil_block_length = 70;
 
 // ROTOR & ROTOR CAP
 rotor_height = 10;
@@ -54,7 +55,7 @@ blade_holder_edge = 20;
 rotor_edge_tie_length = 40;
 rotor_edge_tie_width = 20;
 rotor_edge_tie_inner_height = 5;
-rotor_edge_tie_height = 15;
+rotor_edge_tie_height = 20;
 rotor_edge_tie_peg_inset = 10;
 
 
