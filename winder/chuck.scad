@@ -26,7 +26,7 @@ module chuck() {
     chuck_whole();
     translate([0, chuck_edge/4, 0]) scale([0.5, 0.5, 1]) chuck_whole();
     translate([chuck_edge/-2, chuck_edge/2, stator_height/2]) {
-      rotate([90, 0, 90]) cylinder(h=chuck_edge, r=1);
+      rotate([90, 0, 90]) cylinder(h=chuck_edge, r=2);
     }
   }
 }

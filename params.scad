@@ -16,14 +16,13 @@ mag_ring_or = 102;
 mag_count = 16;
 
 // BEARING
-bearing_height = 17;
-bearing_ir = 33;
-bearing_or = 44;
+bearing_height = 25;
+bearing_ir = 34;
+bearing_or = 43;
 
 // STATOR
-stator_height = 20;
-stator_inner_height = 10;
-stator_bearing_inset = (stator_height/2) - 1;
+stator_height = 16;
+stator_inner_height = stator_height/2;
 stator_count = 6;
 stator_incidence = 360/stator_count;
 stator_radius = 115;
@@ -39,15 +38,14 @@ coil_edge = 80;
 coil_block_length = 70;
 
 // ROTOR & ROTOR CAP
-rotor_height = 10;
+rotor_height = mag_height + 2;
 rotor_inner_height = 3;
 rotor_radius = 105;
-rotor_inner_diameter = 25;
+rotor_inner_radius = 20;
 rotor_count = 8;
 rotor_incidence = 360/rotor_count;
 rotor_tie_hole_offset = 30;
-rotor_notch = 10;
-rotor_notch_height = 2;
+rotor_tab_excess = 8;
 
 rotor_cap_radius = 50;
 rotor_cap_peg_radius = 35;
@@ -57,12 +55,13 @@ rotor_cap_insert_height = 10;
 rotor_cap_bearing_inset = (bearing_height + rotor_inner_height) - rotor_cap_height;
 rotor_plate_height = 5;
 blade_holder_edge = 20;
+rotor_peg_width = 12;
+rotor_peg_height = (rotor_height * 2) + (rotor_cap_height * 2) + stator_height;
 
 // ROTOR EDGE TIE
 rotor_edge_tie_length = 40;
 rotor_edge_tie_width = 20;
 rotor_edge_tie_inner_height = 5;
-rotor_edge_tie_height = 20;
+rotor_edge_tie_height = rotor_height + rotor_plate_height;
 rotor_edge_tie_peg_inset = 10;
-
 

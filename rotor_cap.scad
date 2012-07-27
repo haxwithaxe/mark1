@@ -8,6 +8,7 @@
 
 include <params.scad>
 use <bearing.scad>
+use <rotor_peg.scad>
 
 module subtractor() {
   difference() {
@@ -18,7 +19,13 @@ module subtractor() {
         }
       }
     }
-    cylinder(h=rotor_plate_height, r=bearing_or);
+    cylinder(h=rotor_plate_height, r=bearing_or - 1);
+  }
+  for (i = [0:rotor_count]) {
+    rotate([0, 0, i * (360/rotor_count)]) {
+    //  translate([rotor_peg_width/-2, rotor_inner_radius + 2, -rotor_plate_height])
+        //rotor_peg_unadjusted();
+    }
   }
 }
 

@@ -46,7 +46,7 @@ module notch() {
   translate([0, (stator_notch/2) - (stator_notch_width/2), 0]) {
     cube([stator_notch, stator_notch_width, stator_height]);
   }
-  translate([0, 0, stator_height - stator_notch_width]) {
+  translate([0, 0, 0]) {
     cube([stator_notch, stator_notch, stator_notch_width]);
   }
 }
@@ -60,23 +60,20 @@ module stator() {
     subtractor();
     mirror([1, 0, 0]) subtractor();
     rotate([0, 0, -90 + stator_incidence]) {
-      translate([-stator_notch, stator_tab_offset, 0]) notch();
+      scale([1.05, 1.05, 1.05]) translate([-stator_notch, stator_tab_offset, 0]) notch();
     }
     translate([stator_x/-2, stator_wiring_gap_inset, stator_height - stator_inner_height]) {
       cube([stator_x, stator_wiring_gap, stator_inner_height]);
     }
-    translate([stator_notch_width/-2, 0, 0]) {
-      cube([stator_notch_width, stator_notch, stator_height]);
-    }
     translate([25, stator_radius - stator_notch, stator_height/2]) {
       cube([stator_notch_width, stator_radius/2, stator_height/2]);
     }
-    translate([0, 0, stator_height - stator_bearing_inset]) bearing();
-    translate([0, 0, stator_bearing_inset - bearing_height]) bearing();
+    cylinder(h=stator_height, r=bearing_or);
   }
+  translate([-5, bearing_or, 0]) cube([10, 5, stator_height]);
   translate([stator_outer_tab_width/-2, stator_radius, 0]) tab();
   rotate([0, 0, 90 - stator_incidence]) {
-    translate([-stator_notch, stator_tab_offset, 0]) notch();
+    scale([0.95, 0.95, 1]) translate([-stator_notch, stator_tab_offset, 0]) notch();
   }
 }
 
