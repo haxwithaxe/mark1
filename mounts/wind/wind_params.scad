@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  *
@@ -10,9 +10,6 @@
 frame_thickness = 10;
 
 // BLADE
-blade_length = 1000;
-blade_width = 40;
-blade_base_width = 30;
 blade_thickness = 3;
 blade_count = 3;
 
@@ -23,7 +20,7 @@ bearing_height = 25;
 
 // POLE CAP
 pole_radius = 12.7;
-pole_cap_height = 40;
+pole_cap_height = 80;
 swivel_ir = 22.5;
 swivel_or = 32.5;
 

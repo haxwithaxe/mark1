@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  * 

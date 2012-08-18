@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  * 
@@ -11,4 +11,9 @@
  */
 include <params.scad>
 
-linear_extrude(file="rotor_plate.dxf", layer="Layer_1", height=rotor_plate_height);
+module rotor_plate() {
+  linear_extrude(file="rotor_plate.dxf", layer="Layer_1", height=rotor_plate_height);
+}
+
+rotor_plate();
+

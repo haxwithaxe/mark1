@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  *
@@ -25,12 +25,12 @@ module rotor_view() {
     translate([0, 0, bearing_height * -2]) {
     bearing();
     for (t = [0:rotor_count]) {
-      rotate([0, 0, 22.5 + (t * (360 / rotor_count))]) {
-        translate([0, 99, 0]) rotor_edge_tie();
+      rotate([180, 0, 22.5 + (t * (360 / rotor_count))]) {
+        translate([0, 99, -100]) rotor_edge_tie_unadjusted();
       }
     }
   }
-  translate([0, 0, rotor_cap_height * -5]) {
+  translate([0, 0, rotor_cap_height * 5]) {
     rotor_cap();
   }
 }

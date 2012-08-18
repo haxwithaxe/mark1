@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  * 
@@ -45,7 +45,6 @@ rotor_inner_radius = 20;
 rotor_count = 8;
 rotor_incidence = 360/rotor_count;
 rotor_tie_hole_offset = 30;
-rotor_tab_excess = 8;
 
 rotor_cap_radius = 50;
 rotor_cap_peg_radius = 35;

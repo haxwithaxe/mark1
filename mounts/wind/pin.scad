@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  *
@@ -13,11 +13,7 @@ pin_height = frame_thickness + stator_height + (hole_radius * 2);
 
 module pin_unadjusted() {
   difference() {
-//    cylinder(h=pin_height, r=peg_radius);
-union() {
-cylinder(h=19, r=5);
-cylinder(h=30, r=4);
-}
+    cylinder(h=pin_height, r=peg_radius);
     translate([-peg_radius, 0, 25]) {
       rotate([0, 90, 0]) cylinder(h=peg_radius*2, r=peg_radius/2);
     }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  * 
@@ -14,3 +14,4 @@ translate([0, 0, rotor_height + stator_height*1.25]) stator_view();
 translate([0, 0, rotor_height*3 + stator_height*3]) {
   mirror([0, 0, 1]) rotor_view();
 }
+

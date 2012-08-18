@@ -19,23 +19,11 @@ module subtractor() {
   }
 }
 
-module rotor_base() {
-  rotate([0, 180, 0]) {
-    translate([rotor_edge/-2, rotor_radius - (rotor_tab_excess/2), -rotor_height]) {
-      difference() {
-        cube([rotor_edge, rotor_tab_excess, rotor_tab_height]);
-        cube([rotor_edge, rotor_tab_excess/2, rotor_height + rotor_plate_height]);
-      }
-    }
-  }
-  translate([-rotor_edge/2, 0, 0]) {
-    cube([rotor_edge, rotor_radius, rotor_height]);
-  }
-}
-
 module rotor() {
   difference() {
-    rotor_base();
+    translate([-rotor_edge/2, 0, 0]) {
+      cube([rotor_edge, rotor_radius, rotor_height]);
+    }
     translate([0, 0, rotor_height * -1.5]) {
       subtractor();
       mirror([1, 0, 0]) { subtractor(); }
