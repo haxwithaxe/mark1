@@ -60,7 +60,7 @@ module stator() {
     subtractor();
     mirror([1, 0, 0]) subtractor();
     rotate([0, 0, -90 + stator_incidence]) {
-      scale([1.05, 1.05, 1.05]) translate([-stator_notch, stator_tab_offset, 0]) notch();
+      translate([-stator_notch, stator_tab_offset, 0]) notch();
     }
     translate([stator_x/-2, stator_wiring_gap_inset, stator_height - stator_inner_height]) {
       cube([stator_x, stator_wiring_gap, stator_inner_height]);
@@ -73,7 +73,7 @@ module stator() {
   translate([-5, bearing_or, 0]) cube([10, 5, stator_height]);
   translate([stator_outer_tab_width/-2, stator_radius, 0]) tab();
   rotate([0, 0, 90 - stator_incidence]) {
-    scale([0.95, 0.95, 1]) translate([-stator_notch, stator_tab_offset, 0]) notch();
+    translate([-stator_notch, stator_tab_offset, 0]) notch();
   }
 }
 

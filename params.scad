@@ -17,7 +17,7 @@ mag_count = 16;
 
 // BEARING
 bearing_height = 25;
-bearing_ir = 34;
+bearing_ir = 31;
 bearing_or = 43;
 
 // STATOR

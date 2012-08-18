@@ -1129,6 +1129,18 @@ AcDbBlockTableRecord
 340
 26
   0
+BLOCK_RECORD
+  5
+43
+100
+AcDbSymbolTableRecord
+100
+AcDbBlockTableRecord
+  2
+notch
+340
+0
+  0
 ENDTAB
   0
 ENDSEC
@@ -1243,67 +1255,29 @@ AcDbEntity
 100
 AcDbBlockEnd
   0
-ENDSEC
-  0
-SECTION
-  2
-ENTITIES
-  0
-LINE
-  5
-43
-100
-AcDbEntity
-100
-AcDbLine
-  8
-0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-100.0
- 20
-1000.0
- 30
-0.0
- 11
-100.0
- 21
-0.0
- 31
-0.0
-  0
-LINE
+BLOCK
   5
 44
 100
 AcDbEntity
-100
-AcDbLine
   8
 0
- 62
-256
-370
--1
-  6
-ByLayer
+100
+AcDbBlockBegin
+  2
+notch
+ 70
+0
  10
-140.0
+0.0
  20
-500.0
+0.0
  30
 0.0
- 11
-105.0
- 21
-1000.0
- 31
-0.0
+  3
+notch
+  1
+
   0
 LINE
   5
@@ -1321,15 +1295,15 @@ AcDbLine
   6
 ByLayer
  10
-100.0
+-10.0
  20
-1000.0
+2.0
  30
 0.0
  11
-105.0
+-10.0
  21
-1000.0
+-1.0
  31
 0.0
   0
@@ -1349,15 +1323,15 @@ AcDbLine
   6
 ByLayer
  10
-130.0
+1.0
  20
-0.0
+2.0
  30
 0.0
  11
-140.0
+-10.0
  21
-500.0
+2.0
  31
 0.0
   0
@@ -1377,45 +1351,33 @@ AcDbLine
   6
 ByLayer
  10
-111.0
+-10.0
  20
-0.0
+-1.0
  30
 0.0
  11
-111.0
+0.9399999999999977
  21
-40.0
+-1.0
  31
 0.0
   0
-LINE
+ENDBLK
   5
 48
 100
 AcDbEntity
-100
-AcDbLine
   8
 0
- 62
-256
-370
--1
-  6
-ByLayer
- 10
-119.0
- 20
-40.0
- 30
-0.0
- 11
-119.0
- 21
-0.0
- 31
-0.0
+100
+AcDbBlockEnd
+  0
+ENDSEC
+  0
+SECTION
+  2
+ENTITIES
   0
 LINE
   5
@@ -1433,13 +1395,13 @@ AcDbLine
   6
 ByLayer
  10
-111.0
+100.0
  20
-0.0
+1000.0
  30
 0.0
  11
-119.0
+100.0
  21
 0.0
  31
@@ -1461,15 +1423,15 @@ AcDbLine
   6
 ByLayer
  10
-119.0
+100.0
  20
-40.0
+1000.0
  30
 0.0
  11
-125.0
+105.0
  21
-40.0
+1000.0
  31
 0.0
   0
@@ -1489,15 +1451,15 @@ AcDbLine
   6
 ByLayer
  10
-125.0
+111.0
  20
-40.0
+0.0
  30
 0.0
  11
-125.0
+111.0
  21
-0.0
+40.0
  31
 0.0
   0
@@ -1517,13 +1479,13 @@ AcDbLine
   6
 ByLayer
  10
-125.0
+119.0
  20
-0.0
+40.0
  30
 0.0
  11
-130.0
+119.0
  21
 0.0
  31
@@ -1547,6 +1509,118 @@ ByLayer
  10
 111.0
  20
+0.0
+ 30
+0.0
+ 11
+119.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+4E
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+119.0
+ 20
+40.0
+ 30
+0.0
+ 11
+125.0
+ 21
+40.0
+ 31
+0.0
+  0
+LINE
+  5
+4F
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+125.0
+ 20
+40.0
+ 30
+0.0
+ 11
+125.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+50
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+125.0
+ 20
+0.0
+ 30
+0.0
+ 11
+130.0
+ 21
+0.0
+ 31
+0.0
+  0
+LINE
+  5
+51
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+111.0
+ 20
 40.0
  30
 0.0
@@ -1559,7 +1633,7 @@ ByLayer
   0
 LINE
   5
-4E
+52
 100
 AcDbEntity
 100
@@ -1587,7 +1661,7 @@ ByLayer
   0
 LINE
   5
-4F
+53
 100
 AcDbEntity
 100
@@ -1610,6 +1684,142 @@ ByLayer
 100.0
  21
 0.0
+ 31
+0.0
+  0
+INSERT
+  5
+54
+100
+AcDbEntity
+100
+AcDbBlockReference
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+  2
+notch
+ 10
+130.0
+ 20
+48.0
+ 30
+0.0
+  0
+LINE
+  5
+55
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+130.0
+ 20
+0.0
+ 30
+0.0
+ 11
+130.9399999999999977
+ 21
+47.0
+ 31
+0.0
+  0
+LINE
+  5
+56
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+132.0
+ 20
+100.0
+ 30
+0.0
+ 11
+200.0
+ 21
+200.0
+ 31
+0.0
+  0
+LINE
+  5
+57
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+200.0
+ 20
+200.0
+ 30
+0.0
+ 11
+105.0
+ 21
+1000.0
+ 31
+0.0
+  0
+LINE
+  5
+58
+100
+AcDbEntity
+100
+AcDbLine
+  8
+0
+ 62
+256
+370
+-1
+  6
+ByLayer
+ 10
+132.0
+ 20
+100.0
+ 30
+0.0
+ 11
+131.0
+ 21
+50.0
  31
 0.0
   0
@@ -1651,7 +1861,7 @@ E
   3
 AcDbVariableDictionary
 350
-50
+59
   0
 DICTIONARY
   5
@@ -2115,7 +2325,7 @@ Layout2
   0
 DICTIONARY
   5
-50
+59
 100
 AcDbDictionary
 281
@@ -2123,15 +2333,15 @@ AcDbDictionary
   3
 DIMASSOC
 350
-52
+5B
   3
 HIDETEXT
 350
-51
+5A
   0
 DICTIONARYVAR
   5
-51
+5A
 100
 DictionaryVariables
 280
@@ -2141,7 +2351,7 @@ DictionaryVariables
   0
 DICTIONARYVAR
   5
-52
+5B
 100
 DictionaryVariables
 280

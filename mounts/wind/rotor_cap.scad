@@ -17,7 +17,7 @@ module blade_holder() {
       cube([rotor_cap_radius, blade_holder_edge, blade_holder_edge]);
     }
     translate([12, 5, rotor_cap_height + (blade_holder_edge/2) + 1]) {
-      rotate([0, 30, -90]) {
+      rotate([0, 15, -90]) {
         scale([1.05, 1.05, 1.05]) blade();
       }
     }
@@ -35,3 +35,8 @@ module rotor_cap() {
 }
 
 rotor_cap();
+translate([12, 5, rotor_cap_height + (blade_holder_edge/2) + 1]) {
+      rotate([0, 15, -90]) {
+        scale([1.05, 1.05, 1.05]) blade();
+      }
+    }
