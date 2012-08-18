@@ -35,8 +35,4 @@ module rotor_cap() {
 }
 
 rotor_cap();
-translate([12, 5, rotor_cap_height + (blade_holder_edge/2) + 1]) {
-      rotate([0, 15, -90]) {
-        scale([1.05, 1.05, 1.05]) blade();
-      }
-    }
+
