@@ -61,6 +61,6 @@ rotor_peg_height = (rotor_height * 2) + (rotor_cap_height * 2) + stator_height;
 rotor_edge_tie_length = 40;
 rotor_edge_tie_width = 20;
 rotor_edge_tie_inner_height = 5;
-rotor_edge_tie_height = rotor_height + rotor_plate_height;
+rotor_edge_tie_height = rotor_height + rotor_edge_tie_inner_height + rotor_plate_height;
 rotor_edge_tie_peg_inset = 10;
 

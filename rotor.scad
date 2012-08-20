@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012 Haydn Vesta
+ * Copyright (c) 2012 Haydn Vestal
  * 
  * See the file license.txt for copying permission.
  * 
@@ -19,7 +19,7 @@ module subtractor() {
   }
 }
 
-module rotor() {
+module rotor_unadjusted() {
   difference() {
     translate([-rotor_edge/2, 0, 0]) {
       cube([rotor_edge, rotor_radius, rotor_height]);
@@ -44,6 +44,10 @@ module rotor() {
     translate([rotor_peg_width/-2, rotor_inner_radius + 2, -rotor_height])
       scale([1.05, 1.05, 1.05]) rotor_peg_unadjusted();
   }
+}
+
+module rotor() {
+  rotate([0, 180, 0]) rotor_unadjusted();
 }
 
 rotor();
